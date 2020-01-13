@@ -28,6 +28,7 @@ Backleftmotor = new Spark(7);
 Backrightmotor = new Spark(6);
 drive = new MecanumDrive(Frontleftmotorone, Frontrightmotortwo, Backleftmotor, Backrightmotor );
   }
+ 
   public void Drive(double sideVal, double rottateVal, double forwardVal){
     drive.driveCartesian(sideVal, rottateVal, forwardVal);
   }
@@ -35,6 +36,7 @@ drive = new MecanumDrive(Frontleftmotorone, Frontrightmotortwo, Backleftmotor, B
   public void stop(){
     drive.driveCartesian(0, 0, 0);
   }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
